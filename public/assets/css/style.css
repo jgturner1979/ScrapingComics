@@ -1,0 +1,28 @@
+.jumbotron {
+    background-image: url("https://seppinrek.files.wordpress.com/2016/05/comic-books.jpg");
+    background-size: cover;
+    text-align: center;
+
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: navy;
+    font-family: chewy, sans-serif;
+    text-shadow: 2px 2px #fff;
+}
+
+.lead {
+    color:navy;
+    font-family: chewy, sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 1px #FF0000;;
+}
+
+.btn {
+    margin: .5rem;
+}
+

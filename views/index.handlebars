@@ -1,0 +1,37 @@
+<div class="jumbotron">
+  <h1 class="display-4">Comic News Headlines</h1>
+  <p class="lead">For the geek in all of us!</p>
+  <hr class="my-4">
+  <button type="button" class="btn btn-primary" id="scrapeArticles">Find Articles to Read</button>
+  <button type="button" class="btn btn-primary" id="getArticles">Display Articles</button>
+</div>
+
+<div id="wrapper">
+  <div class="container">
+    <div id="articles"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title" id="title"></div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="note">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <div class="modal-save">
+            </div>
+            <div class="modal-delete">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
