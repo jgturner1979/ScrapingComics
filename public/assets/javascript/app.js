@@ -28,13 +28,13 @@ $("#getArticles").on("click", function () {
         for (var i = 0; i < 15; i++) {
             $("#articles").append("<h4>" + data[i].title + "</h4>");
             $("#articles").append("<a href='https://www.cbr.com'" + data[i].link + "'>Click Here for article</a>");
-            $("#articles").append("<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal' data-id='" + data[i]._id + "'>Make a Note</button>");
+            $("#articles").append("<button type='button' class='btn btn-primary' id='#getnote' data-toggle='modal' data-target='#exampleModal' data-id='" + data[i]._id + "'>Make a Note</button>");
             $("#articles").append("<hr class='hr-primary'></hr>");
         };
     });
 
     // Whenever someone clicks a p tag
-    $(document).on("click", "button", function () {
+    $(document).on("click", "#getnote", function () {
         // // Empty the notes from the note section
         // $("#notes").empty();
         // // Save the id from the p tag
