@@ -15,6 +15,7 @@ $("#scrapeArticles").on("click", function () {
         url: "/scrape/"
     }).then(function (data) {
         console.log("This is my scrape");
+        res.json(data);
     });
 });
 
