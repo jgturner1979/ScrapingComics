@@ -35,7 +35,7 @@ $("#getArticles").on("click", function () {
     });
 
     // Whenever someone clicks a p tag
-    $(document).on("click", "#getnote", function () {
+    $(document).on("click", "getnote", function () {
         // // Empty the notes from the note section
         // $("#notes").empty();
         // // Save the id from the p tag
