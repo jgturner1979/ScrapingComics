@@ -7,16 +7,16 @@
 //     // }
 //   });
 
-$("#scrapeArticles").on("click", function () {
+$("#scrapeArticles").on("click", function (req, res) {
     $("#articles").empty();
+    console.log("Scraped");
 
     $.ajax({
         method: "GET",
-        url: "/scrape/"
-    }).then(function (data) {
-        console.log("This is my scrape");
-        res.json(data);
-    });
+        url: "/scrape"
+    }).then(function(data){
+        console.log(data);
+    })
 });
 
 $("#getArticles").on("click", function () {
@@ -25,7 +25,7 @@ $("#getArticles").on("click", function () {
         method: "GET",
         url: "/articles/"
     }).then(function (data) {
-        console.log("Displaying articles");
+        console.log("Displaying articles ", data);
         for (var i = 0; i < 15; i++) {
             $("#articles").append("<h4>" + data[i].title + "</h4>");
             $("#articles").append("<a href='https://www.cbr.com'" + data[i].link + "'>Click Here for article</a>");
@@ -101,7 +101,7 @@ $("#getArticles").on("click", function () {
                 method: "DELETE",
                 url: "/notes/" + thisId,
                 data: {
-                    body : bodyinput
+                    body: bodyinput
                 }
             })
             .then(function (data) {
